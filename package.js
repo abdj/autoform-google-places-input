@@ -16,12 +16,12 @@ Package.onUse(function(api) {
   ], 'client');
 
   api.imply('dburles:google-maps@1.0.8');
-  
+
   api.addFiles([
-    'lib/geocomplete/1.6.5/jquery.geocomplete.js',
-    'lib/client/abdj:autoform-google-places-input.html',
-    'lib/client/abdj:autoform-google-places-input.css',
-    'lib/client/abdj:autoform-google-places-input.js'
+    'lib/geocomplete/jquery.geocomplete.js',
+    'lib/client/autoform-google-places-input.html',
+    'lib/client/autoform-google-places-input.css',
+    'lib/client/autoform-google-places-input.js'
     ], 'client');
 });
 

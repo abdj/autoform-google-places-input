@@ -1,0 +1,3 @@
+[submodule "lib/geocomplete"]
+	path = lib/geocomplete
+	url = https://github.com/ubilabs/geocomplete
