@@ -1,6 +1,6 @@
 Package.describe({
   name: 'abdj:autoform-google-places-input',
-  version: '0.0.1',
+  version: '0.0.2',
   summary: 'Quick geocomplete input field setup with an export to a customizable address SimpleSchema',
   git: 'https://github.com/abdj/autoform-google-places-input',
   documentation: 'README.md'
