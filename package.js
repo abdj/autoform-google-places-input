@@ -11,8 +11,7 @@ Package.onUse(function(api) {
   api.use([
     'templating@1.0.11', 
     'aldeed:autoform@5.0.2', 
-    'dburles:google-maps@1.0.8', 
-    'reactive-var'
+    'dburles:google-maps@1.0.8'
   ], 'client');
 
   api.imply('dburles:google-maps@1.0.8');
