@@ -10,8 +10,8 @@ Package.onUse(function(api) {
   api.versionsFrom('1.0.3.2');
   api.use([
     'templating', 
-    'aldeed:autoform', 
-    'dburles:google-maps'
+    'aldeed:autoform@4.2.2', 
+    'dburles:google-maps@1.0.8'
   ], 'client');
 
   api.imply('dburles:google-maps@1.0.8');
