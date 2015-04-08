@@ -1,6 +1,6 @@
 Package.describe({
   name: 'abdj:autoform-google-places-input',
-  version: '0.0.2',
+  version: '0.0.4',
   summary: 'Quick geocomplete input field setup with an export to a customizable address SimpleSchema',
   git: 'https://github.com/abdj/autoform-google-places-input',
   documentation: 'README.md'
@@ -9,9 +9,9 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.0.3.2');
   api.use([
-    'templating@1.0.11', 
-    'aldeed:autoform@5.0.2', 
-    'dburles:google-maps@1.0.8'
+    'templating', 
+    'aldeed:autoform', 
+    'dburles:google-maps'
   ], 'client');
 
   api.imply('dburles:google-maps@1.0.8');
