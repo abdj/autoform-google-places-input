@@ -50,6 +50,7 @@ Schema.Test = new SimpleSchema({
     optional: true,
     autoform: {
       type: 'google-places-input'
+      // geopointName: "myOwnGeopointName"
     }
   },
   text: { // useless in our example
