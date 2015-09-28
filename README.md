@@ -10,6 +10,18 @@ meteor add abdj:autoform-google-places-input
 ## todo June 2015
 * debug: do NoT add two google input field into your form, you'll have a conflict between those two inputs. WIP. 
 
+
+## Demo Application
+A demo for this plugin is available here: https://github.com/abdj/meteor_google_input_address_demo
+
+
+## prerequisite
+Ensure you have loaded the GoogleMaps API, either globally or on the route scope. 
+```
+GoogleMaps.load({libraries: 'places'});
+```
+
+
 ## example
 
 into your collection declaration
