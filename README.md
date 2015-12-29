@@ -1,8 +1,7 @@
-# autoform google places input
-
+# Autoform Google Places Input
 Enable a google autocomplete input field into your autoform form, defining a mapper between the google api response and your schema. 
 
-## installation
+## Installation
 ```
 meteor add abdj:autoform-google-places-input
 ```
@@ -12,7 +11,7 @@ A demo for this plugin is available here: http://google-input-address.meteor.com
 Source code of the demo is available here: https://github.com/abdj/meteor_google_input_address_demo
 
 
-## Prerequisite and configuration
+## Prerequisite and Configuration
 Ensure you have loaded the GoogleMaps API, either globally or on the route scope. 
 ```
 GoogleMaps.load({libraries: 'places'});
