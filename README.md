@@ -8,6 +8,7 @@ meteor add abdj:autoform-google-places-input
 
 ## Demo Application
 A demo for this plugin is available here: http://google-input-address.meteor.com/
+
 Source code of the demo is available here: https://github.com/abdj/meteor_google_input_address_demo
 
 
