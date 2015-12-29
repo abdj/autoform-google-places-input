@@ -7,10 +7,6 @@ Enable a google autocomplete input field into your autoform form, defining a map
 meteor add abdj:autoform-google-places-input
 ```
 
-## todo June 2015
-* debug: do NoT add two google input field into your form, you'll have a conflict between those two inputs. WIP. 
-
-
 ## Demo Application
 A demo for this plugin is available here: https://github.com/abdj/meteor_google_input_address_demo
 
@@ -77,3 +73,12 @@ Generate your autoform form:
 ```
     {{> quickForm id="formUpdate" schema="Schema.Test" collection="Test" type="insert" }}
 ```
+
+
+## Changelogs
+  * 29-12-2015:
+     * Allow two address field on the same form
+     * Valid iOS mobile integration
+
+## License 
+MIT
