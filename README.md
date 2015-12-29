@@ -11,16 +11,37 @@ meteor add abdj:autoform-google-places-input
 A demo for this plugin is available here: https://github.com/abdj/meteor_google_input_address_demo
 
 
-## prerequisite
+## Prerequisite and configuration
 Ensure you have loaded the GoogleMaps API, either globally or on the route scope. 
 ```
 GoogleMaps.load({libraries: 'places'});
 ```
 
+(i) Example: Install the package globally
+```
+Meteor.startup(function() {
+  GoogleMaps.load({
+    key: 'YOUR API KEY', // optional, could be loaded via Meteor.settings.public.GOOGLE_MAP_API
+    libraries: 'places'  // can be an array
+  });
+});
+```
 
-## example
+(ii) Example: Optimize loading time, by loading google libraries only on needed routes
+```
+Router.onBeforeAction(function() {
+  GoogleMaps.load({
+    key: 'YOUR API KEY', // optional
+    libraries: 'places'  // can be an array of libraries
+  });
+  this.next();
+}, { only: ['aRoute', 'aSecondRoute'] });
+```
 
-into your collection declaration
+
+## Usage Example
+
+Into your collection declaration
 ```
 //This is the default address schema
 Schema.Address = new SimpleSchema({
@@ -58,7 +79,7 @@ Schema.Test = new SimpleSchema({
     optional: true,
     autoform: {
       type: 'google-places-input'
-      // geopointName: "myOwnGeopointName"
+      // geopointName: "myOwnGeopointName" //optional, you can use a custom geopoint name
     }
   },
   text: { // useless in our example
