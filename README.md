@@ -1,30 +1,48 @@
-# autoform google places input
-
+# Autoform Google Places Input
 Enable a google autocomplete input field into your autoform form, defining a mapper between the google api response and your schema. 
 
-## installation
+## Installation
 ```
 meteor add abdj:autoform-google-places-input
 ```
 
-## todo June 2015
-* debug: do NoT add two google input field into your form, you'll have a conflict between those two inputs. WIP. 
-
-
 ## Demo Application
-A demo for this plugin is available here: https://github.com/abdj/meteor_google_input_address_demo
+A demo for this plugin is available here: http://google-input-address.meteor.com/
+
+Source code of the demo is available here: https://github.com/abdj/meteor_google_input_address_demo
 
 
-## prerequisite
+## Prerequisite and Configuration
 Ensure you have loaded the GoogleMaps API, either globally or on the route scope. 
 ```
 GoogleMaps.load({libraries: 'places'});
 ```
 
+(i) Example: Install the package globally
+```
+Meteor.startup(function() {
+  GoogleMaps.load({
+    key: 'YOUR API KEY', // optional, could be loaded via Meteor.settings.public.GOOGLE_MAP_API
+    libraries: 'places'  // can be an array
+  });
+});
+```
 
-## example
+(ii) Example: Optimize loading time, by loading google libraries only on needed routes
+```
+Router.onBeforeAction(function() {
+  GoogleMaps.load({
+    key: 'YOUR API KEY', // optional
+    libraries: 'places'  // can be an array of libraries
+  });
+  this.next();
+}, { only: ['aRoute', 'aSecondRoute'] });
+```
 
-into your collection declaration
+
+## Usage Example
+
+Into your collection declaration
 ```
 //This is the default address schema
 Schema.Address = new SimpleSchema({
@@ -62,7 +80,7 @@ Schema.Test = new SimpleSchema({
     optional: true,
     autoform: {
       type: 'google-places-input'
-      // geopointName: "myOwnGeopointName"
+      // geopointName: "myOwnGeopointName" //optional, you can use a custom geopoint name
     }
   },
   text: { // useless in our example
@@ -77,3 +95,12 @@ Generate your autoform form:
 ```
     {{> quickForm id="formUpdate" schema="Schema.Test" collection="Test" type="insert" }}
 ```
+
+
+## Changelogs
+  * 29-12-2015:
+     * Allow two address field on the same form
+     * Valid iOS mobile integration
+
+## License 
+MIT
