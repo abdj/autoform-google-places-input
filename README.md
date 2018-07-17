@@ -1,6 +1,10 @@
 # Autoform Google Places Input
 Enable a google autocomplete input field into your autoform form, defining a mapper between the google api response and your schema. 
 
+## ⚠️ NOT MAINTAINED
+
+_Please note:_ **This project is not maintained anymore.**
+
 ## Installation
 ```
 meteor add abdj:autoform-google-places-input
